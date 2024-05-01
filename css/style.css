@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #274C5B;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 4rem;
+}
+.header__logo {
+  width: 20rem;
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+.navigation__item:not(:last-child) {
+  margin-right: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */
