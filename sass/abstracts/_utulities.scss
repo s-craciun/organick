@@ -1,0 +1,37 @@
+.u-center-text {
+  text-align: center;
+}
+
+.padding-md {
+  padding: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+}
+
+// margin bottom
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 4rem;
+}
+
+.mb-lg {
+  margin-bottom: 8rem;
+}
+
+// margin top
+.mt-sm {
+  margin-top: 2rem;
+}
+
+.mt-md {
+  margin-top: 4rem;
+}
+
+.mt-lg {
+  margin-top: 8rem;
+}

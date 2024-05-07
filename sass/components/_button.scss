@@ -1,0 +1,36 @@
+.btn {
+  border: none;
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  font-size: 2rem;
+  cursor: pointer;
+
+  svg {
+    //height: 1.2rem;
+    //width: 3.4rem;
+  }
+
+  &--primary {
+    background-color: $color-main;
+    color: #fff;
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-main;
+  }
+
+  &--transparent {
+    border: 1px solid $color-main;
+    background-color: transparent;
+    color: $color-main;
+  }
+}
+
+.btn-text {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: inherit;
+  cursor: pointer;
+}

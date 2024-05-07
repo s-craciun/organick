@@ -1,0 +1,142 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 3rem;
+  padding: 6rem 4rem 4rem 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+  }
+
+  & > *:not(:last-child) {
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__contact-us {
+    text-align: right;
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: left;
+    }
+
+    &-title {
+      margin-bottom: 4rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    strong {
+      color: $color-grey-5;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid $color-grey-3;
+    border-left: 1px solid $color-grey-3;
+    padding: 3rem 4.5rem;
+
+    p {
+      margin-bottom: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      order: -1;
+      border-right: none;
+      border-left: none;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+  }
+
+  &__social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__social-item {
+    border: none;
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: $color-grey-1;
+    cursor: pointer;
+  }
+
+  &__social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &__pages-title {
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__pages-list {
+    list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__pages-link,
+  &__pages-link:link,
+  &__pages-link:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+.copyright {
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $color-grey-3;
+  padding: 2rem;
+}

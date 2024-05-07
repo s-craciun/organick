@@ -1,5 +1,14 @@
 @import "abstracts/variables";
+@import "abstracts/utulities";
 
 @import "base/base";
+@import "base/typography";
+
+@import "components/button";
+@import "components/card";
+@import "components/input";
 
 @import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";

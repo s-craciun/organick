@@ -9,11 +9,32 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  background-color: #eee;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    font-size: 45%;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    font-size: 75%;
+  }
 }
 
 body {
   font-family: $font-primary;
   font-weight: 400;
   font-size: 1.8rem;
-  color: $color-primary;
+  line-height: 3.2rem;
+  color: $color-main;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
 }
