@@ -2,9 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 
   padding: 8rem 4rem;
+
+  @media only screen and (max-width: $bp-small){
+    flex-direction: column;
+    padding: 6rem 2rem;
+  }
 
   &__card {
     width: 66rem;
@@ -15,14 +19,18 @@
     height: 100%;
     font-size: 4rem;
 
-    //@media only screen and (max-width: $bp-large){
-    //  width: calc(100% - 66rem);
-    //}
+    @media only screen and (max-width: $bp-large){
+      width: calc(50% - 4rem);
+    }
+
+    @media only screen and (max-width: $bp-small){
+      width: 100%;
+    }
 
     &:not(:last-child) {
       margin-right: 4rem;
 
-      @media only screen and (max-width: $bp-medium){
+      @media only screen and (max-width: $bp-small){
         margin-right: 0;
         margin-bottom: 4rem;
       }
@@ -82,19 +90,21 @@
       }
     }
 
-    &__icon {
-      padding: 2.5rem;
+    &__icon-box {
+      height: 96px;
+      width: 96px;
+      padding: 24px;
       background-color: #fff;
       border-radius: 2rem;
 
       &:not(:last-child) {
         margin-right: 2rem;
       }
+    }
 
-      svg {
-        width: 4.8rem;
-        height: 4.8rem;
-      }
+    &__icon {
+      font-size: 48px;
+      color: $color-primary;
     }
   }
 }
@@ -123,11 +133,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 83rem;
+  padding: 15rem 0;
 
   @media only screen and (max-width: $bp-medium) {
     background-image: none;
     background-color: #FCFCFC;
+    padding: 8rem 2rem;
   }
 
   &__photo {
@@ -136,18 +147,21 @@
   }
 
   &__star {
-    height: 2.4rem;
-    width: 2.4rem;
-    fill: var(--color-main);
+    font-size: 24px;
+    color: $color-secondary;
   }
 
   &__text {
     width: 60%;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
   }
 
   span {
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 
@@ -185,19 +199,28 @@
 }
 
 .eco {
+  padding: 8rem 4rem;
+
+  background-image: url("../img/eco.jpeg");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+
   display: flex;
-  position: relative;
+  align-items: center;
+  justify-content: flex-end;
 
   @media only screen and (max-width: $bp-large) {
-    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
   }
 
-  &__img {
-    width: 60%;
-
-    @media only screen and (max-width: $bp-large) {
-      width: 100%;
-    }
+  @media only screen and (max-width: $bp-medium) {
+    padding-top: 30rem;
+    padding-bottom: 0;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 
   &__info {
@@ -205,35 +228,17 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 50%;
-    height: 60rem;
+    width: 60%;
     border-radius: 3.2rem;
     background-color: #fff;
     box-shadow: 1.5rem 1.5rem 4rem 0 rgba(0, 0, 0, .2);
-    position: absolute;
-    right: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media only screen and (max-width: $bp-large) {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: max-content;
-    }
 
     @media only screen and (max-width: $bp-medium) {
-      transform: translate(0);
-      height: max-content;
-      top: 80%;
-      left: 4rem;
-      right: 4rem;
-      width: auto;
+      width: 100%;
     }
 
     @media only screen and (max-width: $bp-small) {
-      left: 2rem;
-      right: 2rem;
+
     }
   }
 
@@ -243,10 +248,16 @@
 }
 
 .features {
+  background-color: $color-grey-1;
   display: grid;
   grid-template-columns: repeat(auto-fit, 43rem);
   justify-content: center;
   grid-gap: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 8rem 2rem;
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
 
   &__item {
     border-radius: 3.2rem;
@@ -315,15 +326,10 @@
     background-size: cover;
     background-position: center;
     padding: 3rem;
-    position: relative;
-    height: 52rem;
+    max-height: calc(((100% - 80px - 2rem) + 14rem) / 1.5);
 
     &--1 {
       background-image: url("../img/news-1.jpeg");
-
-      @media only screen and (max-width: $bp-medium) {
-        margin-bottom: 6rem;
-      }
     }
 
     &--2 {
@@ -332,21 +338,22 @@
   }
 
   &__date {
-    height: 8rem;
-    width: 8rem;
+    height: 80px;
+    width: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
+    margin-bottom: 14rem;
 
     strong {
-      font-size: 3.2rem;
+      font-size: 30px;
     }
 
     span {
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 1;
     }
   }
@@ -357,19 +364,30 @@
     justify-content: space-between;
     box-shadow: 1.5rem 1.5rem 4rem 0 rgba(0, 0, 0, .2);
     align-items: flex-start;
-    height: 32rem;
     background-color: #fff;
     border-radius: 3.2rem;
     padding: 4rem;
-    position: absolute;
-    top: 50%;
-    left: 3rem;
-    right: 3rem;
+    height: max-content;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin: -1rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 24px;
+      color: $color-primary;
+      margin-right: 10px;
+    }
   }
 }
 
 .subscribe {
-  margin-top: 6rem;
 
   &__content {
     background-image: url("../img/subscribe.jpeg");
@@ -386,6 +404,10 @@
       justify-content: center;
       align-items: flex-start;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem;
+    }
   }
 
   &__title {
@@ -396,8 +418,10 @@
 
   &__form {
     display: flex;
+    align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
+      width: 100%;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -405,8 +429,10 @@
 
   &__input {
     margin-right: 2rem;
+    width: 40rem;
 
     @media only screen and (max-width: $bp-medium) {
+      width: 100%;
       margin-right: 0;
       margin-bottom: 2rem;
     }

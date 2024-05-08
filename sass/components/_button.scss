@@ -1,18 +1,42 @@
 .btn {
   border: none;
   border-radius: 1.6rem;
-  padding: 2.4rem;
-  font-size: 2rem;
+  padding: 1.6rem;
+  font-size: 20px;
   cursor: pointer;
 
-  svg {
-    //height: 1.2rem;
-    //width: 3.4rem;
+  span {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      margin-left: 10px;
+
+      -webkit-mask-image: url("../img/SVG/arrow.svg");
+      -webkit-mask-size: cover;
+
+      mask-image: url("../img/SVG/arrow.svg");
+      mask-size: cover;
+
+      background-color: $color-main;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 18px;
   }
 
   &--primary {
     background-color: $color-main;
     color: #fff;
+
+    span::after {
+      background-color: #fff;
+    }
   }
 
   &--secondary {
@@ -25,12 +49,11 @@
     background-color: transparent;
     color: $color-main;
   }
-}
 
-.btn-text {
-  border: none;
-  background-color: transparent;
-  font-size: 2rem;
-  color: inherit;
-  cursor: pointer;
+  &--text {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $color-main;
+  }
 }

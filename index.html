@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="img/organick-logo-short.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/icon-font.css">
     <title>Organick</title>
   </head>
-
   <body>
       <header class="header">
         <nav class="padding-md navigation">
           <img src="img/logo.png" alt="Organick logo" class="header__logo">
-
           <ul class="navigation__menu">
             <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
             <li class="navigation__item"><a href="#" class="navigation__link">About Us</a></li>
@@ -24,283 +21,194 @@
             <li class="navigation__item"><a href="#" class="navigation__link">Contact Us</a></li>
           </ul>
         </nav>
-
         <div class="padding-md presentation">
           <div class="presentation__text-box">
             <h3 class="heading-3">Made with nature</h3>
             <h1 class="heading-1 mb-md">Welcome to the world of nature and organic.</h1>
-            <button class="btn btn--secondary">Explore Now &rarr;</button>
+            <button class="btn btn--secondary"><span>Explore Now</span></button>
           </div>
         </div>
       </header>
-
     <main>
       <section class="padding-md offer">
         <div class="offer__card offer__card--1">
           <h3 class="heading-3 heading-3--white">Natural!!</h3>
-
           <p>Get Garden Fresh Fruits</p>
         </div>
-
         <div class="offer__card offer__card--2">
           <h3 class="heading-3">Offer!!</h3>
-
           <p>Get 10% off on Vegetables</p>
         </div>
       </section>
-      
       <section class="padding-md about-us">
         <img src="img/about.png" alt="Citruses" class="about-us__img">
-
         <div class="about-us__info">
           <h3 class="heading-3">About us</h3>
           <h2 class="heading-2 mb-sm">We Believe in Organic Foods For Strong Health</h2>
           <p class="about-us__text mb-md">
             Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition.
           </p>
-
           <div class="advantages">
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg>
-                  <use xlink:href="img/sprite.svg#icon-food"></use>
-                </svg>
+              <div class="advantages__icon-box">
+                <i class="icon-leaf advantages__icon"></i>
               </div>
-
               <div class="advantages__text">
                 <h4 class="subtitle-2 mb-sm">Organic Foods Only</h4>
                 <p>The Product that you ordered will be verified that we have or not if have we will start to move on with the next step.</p>
               </div>
             </div>
-
             <div class="advantages__item">
-              <div class="advantages__icon">
-                <svg>
-                  <use xlink:href="img/sprite.svg#icon-quality"></use>
-                </svg>
+              <div class="advantages__icon-box">
+                <i class="icon-truck advantages__icon"></i>
               </div>
-
               <div class="advantages__text">
                 <h4 class="subtitle-2 mb-sm">Quality Standards</h4>
                 <p>Once your product is packed it will be delivered to your nearby locality you can directly visit the to buy the product.</p>
               </div>
             </div>
           </div>
-
-          <button class="btn btn--primary mt-md">Shop Now &rarr;</button>
+          <button class="btn btn--primary mt-md"><span>Shop Now</span></button>
         </div>
       </section>
-
       <section class="padding-md product">
         <div class="u-center-text">
           <h3 class="heading-3">Organic</h3>
           <h2 class="heading-2 mb-md">Our Products</h2>
         </div>
-
         <div class="product__cards">
           <div class="card">
             <span class="card__category">Vegetable</span>
             <img src="img/product-1.jpeg" alt="Product 1" class="card__img">
             <h4 class="subtitle-1 card__name">Calabrese Broccoli</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Vegetable</span>
             <img src="img/product-2.jpeg" alt="Product 2" class="card__img">
             <h4 class="subtitle-1 card__name">Fresh Corn</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Millets</span>
             <img src="img/product-3.jpeg" alt="Product 3" class="card__img">
             <h4 class="subtitle-1 card__name">Dried Pistachio</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Vegetable</span>
             <img src="img/product-4.jpeg" alt="Product 4" class="card__img">
             <h4 class="subtitle-1 card__name">Vegan Red Tomato</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Fruits</span>
             <img src="img/product-5.jpeg" alt="Product 5" class="card__img">
             <h4 class="subtitle-1 card__name">Organic Almonds</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Millets</span>
             <img src="img/product-6.jpeg" alt="Product 6" class="card__img">
             <h4 class="subtitle-1 card__name">Brown Hazelnut</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section class="testimonial">
           <h3 class="heading-3">Testimonial</h3>
           <h2 class="heading-2 mb-lg">What Our Customer Saying?</h2>
           <img src="img/customer.jpeg" alt="Customer" class="testimonial__photo mb-sm">
           <div class="testimonial__rating mb-sm">
-            <svg class="testimonial__star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="testimonial__star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="testimonial__star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="testimonial__star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="testimonial__star">
-              <use xlink:href="img/sprite.svg#icon-star"></use>
-            </svg>
+            <i class="icon-star testimonial__star"></i>
+            <i class="icon-star testimonial__star"></i>
+            <i class="icon-star testimonial__star"></i>
+            <i class="icon-star testimonial__star"></i>
+            <i class="icon-star testimonial__star"></i>
           </div>
           <p class="testimonial__text mb-sm">The quality of organic produce is extremely high, the service is second to none and the taste of the food takes me back to my childhood when we were growing our own.</p>
           <h4 class="subtitle-4">Sara Taylor</h4>
           <span>Consumer</span>
       </section>
-
       <section class="padding-md offer-products">
         <div class="offer-products__top mb-md">
           <div class="offer-products__headings">
             <h3 class="heading-3">Offer products</h3>
             <h2 class="heading-2 heading-2--white">We Offer Organic for You</h2>
           </div>
-          <button class="btn btn--secondary">View All Products &rarr;</button>
+          <button class="btn btn--secondary"><span>View All Products</span></button>
         </div>
         <div class="offer-products__cards">
           <div class="card">
@@ -308,125 +216,88 @@
             <img src="img/product-4.jpeg" alt="Product 1" class="card__img">
             <h4 class="subtitle-1 card__name">Vegan Red Tomato</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Vegetable</span>
             <img src="img/product-5.jpeg" alt="Product 2" class="card__img">
             <h4 class="subtitle-1 card__name">Organic Almonds</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
-
           <div class="card">
             <span class="card__category">Vegetable</span>
             <img src="img/product-2.jpeg" alt="Product 3" class="card__img">
             <h4 class="subtitle-1 card__name">Fresh Corn</h4>
             <div class="card__overview">
-              <span class="card__old-price">$ 25.00 USD</span>
-              <span class="card__new-price">$ 21.00 USD</span>
-
+              <div class="card__prices">
+                <span class="card__old-price">$ 25.00 USD</span>
+                <span class="card__new-price">$ 21.00 USD</span>
+              </div>
               <div class="card__rating">
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="card__star">
-                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
+                <i class="icon-star card__star"></i>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section class="eco">
-        <img src="img/eco.jpeg" alt="Landscape" class="eco__img">
-
         <div class="padding-md eco__info">
           <div class="eco__headings">
             <h3 class="heading-3">Eco friendly</h3>
             <h2 class="heading-2 mb-md">From our Farm to your Home</h2>
           </div>
-
           <div class="eco__text">
             <h5 class="subtitle-3">Choose Your Products</h5>
             <p>In our listing, we have several collections of organic products. This is the place where you need to choose the product you want.</p>
           </div>
-
           <div class="eco__text">
             <h5 class="subtitle-3">Farmers will produce it</h5>
             <p>The Product that you ordered will be verified that we have or not if have we will start to move on with the next step.</p>
           </div>
-
           <div class="eco__text">
             <h5 class="subtitle-3">We Can Delivery too</h5>
             <p>If you are not comfortable going to the nearby market place we also will deliver your product to your doorstep.</p>
           </div>
         </div>
       </section>
-
       <section class="padding-md features">
         <div class="features__item features__item--1">
           <span class="subtitle-3 features__name">Fruit Juice</span>
         </div>
         <div class="features__item features__item--2">
-          <span class="subtitle-3 features__name">Fruit Juice</span>
+          <span class="subtitle-3 features__name">Organic Food</span>
         </div>
         <div class="features__item features__item--3">
-          <span class="subtitle-3 features__name">Fruit Juice</span>
+          <span class="subtitle-3 features__name">Nuts Cookies</span>
         </div>
       </section>
-
       <section class="padding-md news">
         <div class="news__top mb-md">
           <div class="news__headings">
@@ -437,119 +308,99 @@
             More News &rarr;
           </button>
         </div>
-
         <div class="news__discover">
           <div class="news__item news__item--1">
             <div class="news__date">
               <strong>14</strong>
               <span>Feb</span>
             </div>
-
             <div class="news__article">
-              <div class="news__user">
+              <div class="news__user mb-sm">
+                <i class="icon-user"></i>
                 Kristina Castle
               </div>
-
-              <h5 class="subtitle-3">Everything You Need to Know About Organic</h5>
-              <p class="news__text">
+              <h5 class="subtitle-3 mb-sm">Everything You Need to Know About Organic</h5>
+              <p class="news__text mb-md">
                 Organic farming is the only way that you still can experience the real world.
               </p>
-
-              <button class="btn-text">View More &rarr;</button>
+              <button class="btn btn--text"><span>View More</span></button>
             </div>
           </div>
-
           <div class="news__item news__item--2">
             <div class="news__date">
               <strong>24</strong>
               <span>Sep</span>
             </div>
-
             <div class="news__article">
-              <div class="news__user">
+              <div class="news__user mb-sm">
+                <i class="icon-user"></i>
                 Alex Louis
               </div>
-
-              <h5 class="subtitle-3">Organic Fruits: Surprising Benefits and Facts</h5>
-              <p class="news__text">
+              <h5 class="subtitle-3 mb-sm">Organic Fruits: Surprising Benefits and Facts</h5>
+              <p class="news__text mb-md">
                 The world of nature has grown on the principles of health, ecology, and care.
               </p>
-
-              <button class="btn-text">View More &rarr;</button>
+              <button class="btn btn--text"><span>View More</span></button>
             </div>
           </div>
         </div>
       </section>
-
       <div class="padding-md subscribe">
         <div class="subscribe__content">
           <h2 class="heading-2 heading-2--white subscribe__title">Subscribe our <br /> Newsletter</h2>
           <form class="subscribe__form">
-<!--            <input type="text" class="input subscribe__input" placeholder="Enter your email address">-->
-            <button class="btn btn--primary">Subscribe &rarr;</button>
+            <div class="subscribe__input">
+              <input type="text" class="input" placeholder="Enter your email address">
+            </div>
+            <button class="btn btn--primary"><span>Subscribe</span></button>
           </form>
         </div>
       </div>
     </main>
-
     <footer class="padding-md footer">
         <div class="footer__contact-us">
           <h4 class="heading-4 footer__contact-us-title">Contact Us</h4>
-
           <div class="footer__contact">
             <strong>Email</strong>
             needhelp@organick.com
           </div>
-
           <div class="footer__contact">
             <strong>Phone</strong>
             123 (1254) 1452
           </div>
-
           <div class="footer__contact">
             <strong>Address</strong>
             88 Road, Brooklyn Street, USA
           </div>
         </div>
-
         <div class="footer__center">
           <img src="img/logo.png" alt="Organick logo" class="footer__logo">
           <p>We are a popular and farming company aspiring to be a leader in the Organic food industry.</p>
           <ul class="footer__social-list">
             <li>
-              <button class="footer__social-item">
-                <svg class="footer__social-icon">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </button>
+              <a class="footer__social-item">
+                <i class="icon-fb"></i>
+              </a>
             </li>
             <li>
-              <button class="footer__social-item">
-                <svg class="footer__social-icon">
-                  <use xlink:href="img/sprite.svg#icon-tw"></use>
-                </svg>
-              </button>
+              <a class="footer__social-item">
+                <i class="icon-tw"></i>
+              </a>
             </li>
             <li>
-              <button class="footer__social-item">
-                <svg class="footer__social-icon">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
-                </svg>
-              </button>
+              <a class="footer__social-item">
+                <i class="icon-inst"></i>
+              </a>
             </li>
             <li>
-              <button class="footer__social-item">
-                <svg class="footer__social-icon">
-                  <use xlink:href="img/sprite.svg#icon-tw"></use>
-                </svg>
-              </button>
+              <a class="footer__social-item">
+                <i class="icon-pint"></i>
+              </a>
             </li>
           </ul>
         </div>
-
         <div class="footer__pages">
           <h4 class="heading-4 footer__pages-title">Utility Pages</h4>
-
           <ul class="footer__pages-list">
             <li class="footer__pages-item"><a href="#" class="footer__pages-link">Style Guide</a></li>
             <li class="footer__pages-item"><a href="#" class="footer__pages-link">Protected</a></li>
@@ -559,7 +410,6 @@
           </ul>
         </div>
       </footer>
-
     <div class="padding-md copyright">
         Copyright &copy; Organick
       </div>

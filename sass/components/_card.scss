@@ -8,7 +8,7 @@
 
   &__category {
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 16px;
     color: #fff;
     background-color: $color-main;
     padding: .6rem 2.4rem;
@@ -35,6 +35,21 @@
   &__overview {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__prices {
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__old-price {
@@ -44,8 +59,8 @@
   }
 
   &__new-price {
-    margin-right: auto;
-    font-size: 2rem;
+    //margin-right: auto;
+    font-size: 20px;
   }
 
   &__rating {
@@ -53,7 +68,7 @@
   }
 
   &__star {
-    height: 1.6rem;
-    width: 1.6rem;
+    font-size: 16px;
+    color: $color-secondary;
   }
 }

@@ -8,7 +8,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px - 1rem
   background-color: #eee;
 
   @media only screen and (max-width: $bp-large) {
@@ -31,8 +31,8 @@ html {
 body {
   font-family: $font-primary;
   font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
+  font-size: 18px;
+  line-height: 32px;
   color: $color-main;
   max-width: 1440px;
   margin: 0 auto;

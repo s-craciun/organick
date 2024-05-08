@@ -6,6 +6,7 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 1fr;
+    padding: 4rem 2rem 2rem 2rem;
   }
 
   & > *:not(:last-child) {
@@ -80,25 +81,37 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
     li {
 
       &:not(:last-child) {
         margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          margin-right: 0;
+        }
       }
     }
   }
 
   &__social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    padding: 2rem;
+    padding: 20px;
     border-radius: 50%;
     background-color: $color-grey-1;
     cursor: pointer;
-  }
 
-  &__social-icon {
-    height: 2.4rem;
-    width: 2.4rem;
+    i {
+      font-size: 24px;
+      color: $color-main;
+    }
   }
 
   &__pages-title {
