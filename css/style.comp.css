@@ -1,3 +1,4 @@
+@import "public/icon-font.css";
 :root {
   --color-main: #274C5B;
   --color-primary: #7EB693;
@@ -273,6 +274,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navigation__button {
+  height: 24px;
+  width: 24px;
+}
+.navigation__icon {
+  display: inline-block;
+  height: 1px;
+  width: 24px;
+  background-color: #274C5B;
+}
+.navigation__icon::after, .navigation__icon::before {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 24px;
+  background-color: #274C5B;
 }
 .navigation__menu {
   display: flex;

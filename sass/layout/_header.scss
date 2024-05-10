@@ -10,6 +10,33 @@
   justify-content: space-between;
   align-items: center;
 
+  &__checkbox {
+    //display: none;
+  }
+
+  &__button {
+    height: 24px;
+    width: 24px;
+  }
+
+  %icon {}
+
+  &__icon {
+    display: inline-block;
+    height: 1px;
+    width: 24px;
+    background-color: #274C5B;
+
+    &::after,
+    &::before {
+      display: inline-block;
+      content: '';
+      height: 1px;
+      width: 24px;
+      background-color: #274C5B;
+    }
+  }
+
   &__menu {
     display: flex;
     list-style: none;
