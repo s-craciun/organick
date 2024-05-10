@@ -274,23 +274,75 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
+  top: 0;
+  z-index: 9999;
+}
+.navigation__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 56.26em) {
+  .navigation__top {
+    width: 100%;
+  }
+}
+.navigation__checkbox {
+  display: none;
 }
 .navigation__button {
+  display: none;
   height: 24px;
   width: 24px;
 }
-.navigation__icon {
+@media only screen and (max-width: 56.26em) {
+  .navigation__button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+  }
+}
+.navigation .navigation__icon::after, .navigation .navigation__icon::before, .navigation .navigation__icon {
   display: inline-block;
   height: 1px;
   width: 24px;
   background-color: #274C5B;
+  transition: all 0.2s ease-in-out;
+}
+.navigation__icon {
+  position: relative;
 }
 .navigation__icon::after, .navigation__icon::before {
-  display: inline-block;
   content: "";
-  height: 1px;
-  width: 24px;
-  background-color: #274C5B;
+  position: absolute;
+  left: 0;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__content {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 56.26em) {
+  .navigation__content {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 68px);
+    background-color: #fff;
+    padding: 40px 2rem;
+  }
 }
 .navigation__menu {
   display: flex;
@@ -299,10 +351,17 @@ body {
 @media only screen and (max-width: 56.26em) {
   .navigation__menu {
     display: none;
+    flex-direction: column;
   }
 }
 .navigation__item:not(:last-child) {
   margin-right: 4rem;
+}
+@media only screen and (max-width: 56.26em) {
+  .navigation__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }
 .navigation__item:first-child {
   color: #7EB693;
@@ -312,8 +371,53 @@ body {
   color: inherit;
   cursor: pointer;
 }
+.navigation__social {
+  display: none;
+  list-style: none;
+  width: 100%;
+}
+.navigation__social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+.navigation__social__item i {
+  font-size: 24px;
+  color: #274C5B;
+}
+.navigation__checkbox:checked .navigation {
+  display: flex;
+  flex-direction: column;
+}
+.navigation__checkbox:checked ~ .navigation__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.navigation__checkbox:checked ~ .navigation__content .navigation__menu, .navigation__checkbox:checked ~ .navigation__content .navigation__social {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(-135deg);
+}
 
 .presentation {
+  margin-top: 13.6rem;
   height: calc(100vh - 13.6rem);
   background-image: url("../img/hero.jpeg");
   background-size: cover;

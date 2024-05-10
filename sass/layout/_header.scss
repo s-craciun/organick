@@ -9,31 +9,82 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
+  top: 0;
+  z-index: 9999;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+  }
 
   &__checkbox {
-    //display: none;
+    display: none;
   }
 
   &__button {
+    display: none;
     height: 24px;
     width: 24px;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10000;
+    }
   }
 
-  %icon {}
-
-  &__icon {
+  %icon {
     display: inline-block;
     height: 1px;
     width: 24px;
-    background-color: #274C5B;
+    background-color: $color-main;
+    transition: all .2s ease-in-out;
+  }
+
+  &__icon {
+    position: relative;
+    @extend %icon;
 
     &::after,
     &::before {
-      display: inline-block;
+      @extend %icon;
       content: '';
-      height: 1px;
-      width: 24px;
-      background-color: #274C5B;
+      position: absolute;
+      left: 0;
+    }
+
+    &::after {
+      top: 8px;
+    }
+
+    &::before {
+      top: -8px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 68px);
+      background-color: #fff;
+      padding: 40px 2rem;
     }
   }
 
@@ -43,12 +94,18 @@
 
     @media only screen and (max-width: $bp-medium) {
       display: none;
+      flex-direction: column;
     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 4rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
     }
 
     &:first-child {
@@ -63,14 +120,70 @@
     color: inherit;
     cursor: pointer;
   }
+
+  &__social {
+    display: none;
+    list-style: none;
+    width: 100%;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding: 20px;
+      border-radius: 50%;
+      background-color: $color-grey-1;
+      cursor: pointer;
+
+      i {
+        font-size: 24px;
+        color: $color-main;
+      }
+    }
+  }
+
+  // Functionality for mobile navigation
+
+  &__checkbox:checked  & {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__checkbox:checked ~ &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__checkbox:checked ~ &__content &__menu,
+  &__checkbox:checked ~ &__content &__social, {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__checkbox:checked ~ &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked ~ &__button &__icon::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked ~ &__button &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
 
 .presentation {
+   margin-top: 13.6rem;
    height: calc(100vh - 13.6rem);
    background-image: url("../img/hero.jpeg");
    background-size: cover;
    background-position: center;
-   //padding: 4rem;
 
   @media only screen and (max-width: $bp-medium) {
     font-size: 50%;
