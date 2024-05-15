@@ -7,37 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/hero.jpeg" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="img/hero-large.jpeg" type="image/webp">
     <title>Organick</title>
   </head>
   <body>
       <header class="header">
         <nav class="padding-md navigation">
-          <img src="img/logo.png" alt="Organick logo" class="header__logo">
+          <a href="#" class="navigation__logo nav-link"><img src="img/logo.png" alt="Organick logo" class="header__logo"></a>
           <input id="nav-toggle" type="checkbox" class="navigation__checkbox">
           <label for="nav-toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
           </label>
-          <div class="navigation__content">
+          <div id="nav-content" class="navigation__content">
             <ul class="navigation__menu">
-              <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">About Us</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Shop</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Pages</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Contact Us</a></li>
+              <li class="navigation__item"><a href="#" class="navigation__link nav-link">Home</a></li>
+              <li class="navigation__item"><a href="#" class="navigation__link nav-link">About Us</a></li>
+              <li class="navigation__item"><a href="#" class="navigation__link nav-link">Shop</a></li>
+              <li class="navigation__item"><a href="#" class="navigation__link nav-link">Pages</a></li>
+              <li class="navigation__item"><a href="#" class="navigation__link nav-link">Contact Us</a></li>
             </ul>
             <ul class="navigation__social">
               <li class="navigation__social__item">
-                <i class="icon-fb"></i>
+                <a href="https://www.facebook.com/"><i class="icon-fb"></i></a>
               </li>
               <li class="navigation__social__item">
-                <i class="icon-tw"></i>
+                <a href="https://twitter.com/"><i class="icon-tw"></i></a>
               </li>
               <li class="navigation__social__item">
-                <i class="icon-inst"></i>
+                <a href="https://www.instagram.com/"><i class="icon-inst"></i></a>
               </li>
               <li class="navigation__social__item">
-                <i class="icon-pint"></i>
+                <a href="https://www.pinterest.com/"><i class="icon-pint"></i></a>
               </li>
             </ul>
           </div>
@@ -71,22 +71,14 @@
           </p>
           <div class="advantages">
             <div class="advantages__item">
-              <div class="advantages__icon-box">
-                <i class="icon-leaf advantages__icon"></i>
-              </div>
-              <div class="advantages__text">
-                <h4 class="subtitle-2 mb-sm">Organic Foods Only</h4>
-                <p>The Product that you ordered will be verified that we have or not if have we will start to move on with the next step.</p>
-              </div>
+              <i class="icon-leaf advantages__icon"></i>
+              <h4 class="subtitle-2 advantages__title">Organic Foods Only</h4>
+              <p class="advantages__text">The Product that you ordered will be verified that we have or not if have we will start to move on with the next step.</p>
             </div>
             <div class="advantages__item">
-              <div class="advantages__icon-box">
-                <i class="icon-truck advantages__icon"></i>
-              </div>
-              <div class="advantages__text">
-                <h4 class="subtitle-2 mb-sm">Quality Standards</h4>
-                <p>Once your product is packed it will be delivered to your nearby locality you can directly visit the to buy the product.</p>
-              </div>
+              <i class="icon-truck advantages__icon"></i>
+              <h4 class="subtitle-2 advantages__title">Quality Standards</h4>
+              <p class="advantages__text">Once your product is packed it will be delivered to your nearby locality you can directly visit the to buy the product.</p>
             </div>
           </div>
           <button class="btn btn--primary mt-md"><span>Shop Now</span></button>
@@ -326,7 +318,7 @@
             <h2 class="heading-2">Discover content about organic products</h2>
           </div>
           <button class="btn btn--transparent">
-            More News &rarr;
+            <span>More News</span>
           </button>
         </div>
         <div class="news__discover">
@@ -344,7 +336,7 @@
               <p class="news__text mb-md">
                 Organic farming is the only way that you still can experience the real world.
               </p>
-              <button class="btn btn--text"><span>View More</span></button>
+              <button class="btn-text"><span>View More</span></button>
             </div>
           </div>
           <div class="news__item news__item--2">
@@ -361,14 +353,14 @@
               <p class="news__text mb-md">
                 The world of nature has grown on the principles of health, ecology, and care.
               </p>
-              <button class="btn btn--text"><span>View More</span></button>
+              <button class="btn-text"><span>View More</span></button>
             </div>
           </div>
         </div>
       </section>
       <div class="padding-md subscribe">
         <div class="subscribe__content">
-          <h2 class="heading-2 heading-2--white subscribe__title">Subscribe our <br /> Newsletter</h2>
+          <h2 class="heading-2 heading-2--white subscribe__title">Subscribe our <br/> Newsletter</h2>
           <form class="subscribe__form">
             <div class="subscribe__input">
               <input type="text" class="input" placeholder="Enter your email address">
@@ -383,43 +375,43 @@
           <h4 class="heading-4 footer__contact-us-title">Contact Us</h4>
           <div class="footer__contact">
             <strong>Email</strong>
-            needhelp@organick.com
+            <a href="mailto:needhelp@organick.com?&subject=Help%20request&body=Can%20you%20help%20me%20please!%20My%20mentor%20is%20da%20best!">needhelp@organick.com</a>
           </div>
           <div class="footer__contact">
             <strong>Phone</strong>
-            123 (1254) 1452
+            <a href="tel:12312541452">123 (1254) 1452</a>
           </div>
           <div class="footer__contact">
             <strong>Address</strong>
-            88 Road, Brooklyn Street, USA
+            <a href="https://www.google.com/maps/place/88th+Rd,+Queens,+NY+11421,+USA/@40.6896296,-73.8644484,17z/data=!3m1!4b1!4m10!1m2!2m1!1s88+Road,+Brooklyn+Street,+USA!3m6!1s0x89c25de7d20b40c5:0xcd312519a435097c!8m2!3d40.6896297!4d-73.8595775!15sCh04OCBSb2FkLCBCcm9va2x5biBTdHJlZXQsIFVTQZIBBXJvdXRl4AEA!16s%2Fg%2F1w97w944?entry=ttu">88 Road, Brooklyn Street, USA</a>
           </div>
         </div>
         <div class="footer__center">
           <img src="img/logo.png" alt="Organick logo" class="footer__logo">
           <p>We are a popular and farming company aspiring to be a leader in the Organic food industry.</p>
-          <ul class="footer__social-list">
-            <li>
-              <a class="footer__social-item">
-                <i class="icon-fb"></i>
-              </a>
-            </li>
-            <li>
-              <a class="footer__social-item">
-                <i class="icon-tw"></i>
-              </a>
-            </li>
-            <li>
-              <a class="footer__social-item">
-                <i class="icon-inst"></i>
-              </a>
-            </li>
-            <li>
-              <a class="footer__social-item">
-                <i class="icon-pint"></i>
-              </a>
-            </li>
-          </ul>
         </div>
+      <ul class="footer__social-list">
+        <li>
+          <a href="https://www.facebook.com/" class="footer__social-item">
+            <i class="icon-fb"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/" class="footer__social-item">
+            <i class="icon-tw"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="footer__social-item">
+            <i class="icon-inst"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.pinterest.com/" class="footer__social-item">
+            <i class="icon-pint"></i>
+          </a>
+        </li>
+      </ul>
         <div class="footer__pages">
           <h4 class="heading-4 footer__pages-title">Utility Pages</h4>
           <ul class="footer__pages-list">
@@ -431,8 +423,15 @@
           </ul>
         </div>
       </footer>
-    <div class="padding-md copyright">
-        Copyright &copy; Organick
-      </div>
+    <div class="padding-md copyright">Copyright &copy; Organick 2024</div>
+      <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            document.getElementById('nav-toggle').checked = false;
+          })
+        })
+      </script>
   </body>
 </html>

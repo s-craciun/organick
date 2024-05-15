@@ -48,6 +48,7 @@
 
     &--2 {
       background-image: url("../img/offer-2.jpeg");
+      color: $color-main;
     }
   }
 }
@@ -82,11 +83,53 @@
   .advantages {
 
     &__item {
-      display: flex;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-template-rows: min-content min-content min-content;
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+
+      @media only screen and (max-width: $bp-small) {
+        align-items: center;
+      }
 
       &:not(:last-child) {
         margin-bottom: 3rem;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 96px;
+      width: 96px;
+      background-color: #fff;
+      border-radius: 2rem;
+      font-size: 48px;
+      color: $color-primary;
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 1 / 2;
+      }
+    }
+
+    &__title {
+      grid-column: 2 / -1;
+
+      @media only screen and (max-width: $bp-smallest) {
+        word-spacing: 100vw;
+      }
+    }
+
+    &__text {
+      grid-column: 2 / -1;
+      line-height: 1.4;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
       }
     }
 
@@ -94,17 +137,10 @@
       height: 96px;
       width: 96px;
       padding: 24px;
-      background-color: #fff;
-      border-radius: 2rem;
 
       &:not(:last-child) {
         margin-right: 2rem;
       }
-    }
-
-    &__icon {
-      font-size: 48px;
-      color: $color-primary;
     }
   }
 }
@@ -142,7 +178,8 @@
   }
 
   &__photo {
-    height: 11.2rem;
+    height: 112px;
+    width: 112px;
     border-radius: 50%;
   }
 
@@ -216,8 +253,7 @@
   }
 
   @media only screen and (max-width: $bp-medium) {
-    padding-top: 30rem;
-    padding-bottom: 0;
+    padding: 30rem 0 0;
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
@@ -235,10 +271,8 @@
 
     @media only screen and (max-width: $bp-medium) {
       width: 100%;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-
+      border-radius: 0;
+      box-shadow: none;
     }
   }
 
@@ -413,6 +447,12 @@
   &__title {
     @media only screen and (max-width: $bp-large) {
       margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      background-color: rgba(#fff, 0.4);
+      border-radius: 2rem;
+      padding: 8px;
     }
   }
 

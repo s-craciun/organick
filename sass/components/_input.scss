@@ -1,11 +1,21 @@
 .input {
   border: none;
-  padding: 24px 40px;
+  padding: 2.3rem;
   border-radius: 1.6rem;
   width: 100%;
+  font-size: 18px;
+  font-family: inherit;
 
   &::placeholder {
     color: $color-main;
     font-size: 18px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: $color-grey-4;
   }
 }

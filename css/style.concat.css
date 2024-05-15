@@ -368,7 +368,7 @@ body {
 
 .presentation {
   height: calc(100vh - 13.6rem);
-  background-image: url("../img/hero.jpeg");
+  background-image: url("../img/hero-large.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;

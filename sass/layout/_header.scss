@@ -1,6 +1,7 @@
 .header {
   &__logo {
     width: 20rem;
+    height: 100%;
     cursor: pointer;
   }
 }
@@ -16,14 +17,9 @@
   top: 0;
   z-index: 9999;
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media only screen and (max-width: $bp-medium) {
-      width: 100%;
-    }
+  &__logo:link,
+  &__logo:visited {
+    line-height: 1;
   }
 
   &__checkbox {
@@ -130,11 +126,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: none;
       padding: 20px;
       border-radius: 50%;
       background-color: $color-grey-1;
-      cursor: pointer;
+
+      a,
+      a:link,
+      a:visited {
+        text-decoration: none;
+        line-height: 1;
+      }
 
       i {
         font-size: 24px;
@@ -181,12 +182,14 @@
 .presentation {
    margin-top: 13.6rem;
    height: calc(100vh - 13.6rem);
-   background-image: url("../img/hero.jpeg");
+   background-image: url("../img/hero-large.jpeg");
    background-size: cover;
    background-position: center;
 
   @media only screen and (max-width: $bp-medium) {
-    font-size: 50%;
+    margin-top: 7.68rem;
+    height: calc(100vh - 7.68rem);
+    background-image: url("../img/hero-medium.jpeg");
   }
 
    display: flex;
