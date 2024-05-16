@@ -42,13 +42,21 @@
     }
 
     &--1 {
-      background-image: url("../img/offer-1.jpeg");
+      background-image: url("../img/offer-1-large.jpeg");
       color: #fff;
+
+      @media only screen and (max-width: $bp-small){
+        background-image: url("../img/offer-1-small.jpeg");
+      }
     }
 
     &--2 {
-      background-image: url("../img/offer-2.jpeg");
+      background-image: url("../img/offer-2-large.jpeg");
       color: $color-main;
+
+      @media only screen and (max-width: $bp-small){
+        background-image: url("../img/offer-2-small.jpeg");
+      }
     }
   }
 }
@@ -161,7 +169,7 @@
 }
 
 .testimonial {
-  background-image: url("../img/testimonial.jpeg");
+  background-image: url("../img/testimonial-large.jpeg");
   background-size: cover;
   background-position: top;
   display: flex;
@@ -170,6 +178,10 @@
   align-items: center;
   text-align: center;
   padding: 15rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    background-image: url("../img/testimonial-medium.jpeg");
+  }
 
   @media only screen and (max-width: $bp-medium) {
     background-image: none;
