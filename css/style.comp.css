@@ -1,4 +1,4 @@
-@import "public/icon-font.css";
+@import "../css/icon-font.css";
 :root {
   --color-main: #274C5B;
   --color-primary: #7EB693;
